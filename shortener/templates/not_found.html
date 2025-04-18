@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin-top: 80px;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            background: white;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .emoji {
+            font-size: 60px;
+            margin-bottom: 10px;
+            animation: shake 1s ease-in-out infinite;
+        }
+        .btn {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+        .back-btn {
+            background: #ff416c;
+            border: none;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #ff4b2b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-2px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="emoji">😕</div>
+            <h2>Oops! URL Not Found</h2>
+            <p>The short URL <strong>"{{ short_code }}"</strong> does not exist or has expired.</p>
+            <a href="/" class="btn back-btn">🔗 Go Back to Shortener</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
